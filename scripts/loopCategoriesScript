@@ -18,8 +18,18 @@ $(echo"")>itemTotalsPerCat
 #loop through categories
 while read p; do
 	#totalitems for limit/offset loop purposes
-	totalItems=$(getTotalItemsScript $1 MLA5726)
-	echo ${totalItems} >> itemTotalsPerCat
-	
+	totalItems=$(getTotalItemsScript $1 $p)
+#DEBUG	echo ${totalItems}
+#DEBUG	echo $p	
+	#limit/offset loop through items
+	COUNTER=0
+	nameCounter=1
+	let totalItems=totalItems+50;
+	#necessary to allow for lagging items in last <50
+	while [ $COUNTER -lt ${totalItems} ]; do
+		curlNparseScript $1 itemList$p$nameCounter 200 $COUNTER $p 
+		let COUNTER=COUNTER+50;
+		let nameCounter=nameCounter+1
+	done
 done <catList
 fi
