@@ -7,7 +7,7 @@
 if [ "$#" -ne 2 ]
 then
         echo "Usage: script | siteID |  categoryID"
-        echo "E.g.:  ./curlNparseScript MLA MLA5726"
+        echo "E.g.:  ./getTotalItemsScript MLA MLA5726"
 else
         curl -s "https://api.mercadolibre.com/sites/$1/search?category=$2" | sed -e 's/"id":"'$1'/\'$'\n\t"id":"'$1'/g' | sed -e 's/{/\'$'\n/g' | sed -e 's/,/\'$'\n/g' | grep 'total'| sed 's/[^0-9]//g'  
 

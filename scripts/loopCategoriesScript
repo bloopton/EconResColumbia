@@ -1,0 +1,25 @@
+#/bin/bash
+#Austin Pennington
+#Columbia University
+#
+PATH=${PATH}:~/econres/scripts
+#Takes in site id; will loop later
+
+if [ "$#" -ne 1 ]
+then
+        echo "Usage: script | siteID"
+        echo "E.g.:  ./loopCategoriesScript MLA"
+else
+#creates file called catList
+$(categoryParseScript $1)
+
+$(echo"")>itemTotalsPerCat
+
+#loop through categories
+while read p; do
+	#totalitems for limit/offset loop purposes
+	totalItems=$(getTotalItemsScript $1 MLA5726)
+	echo ${totalItems} >> itemTotalsPerCat
+	
+done <catList
+fi
