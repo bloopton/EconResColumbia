@@ -6,5 +6,5 @@ if [ "$#" -ne 5 ]
 then
 	echo "Usage: script | siteID | fileName | limit | offset | categoryID"
 else
-	curl -s "https://api.mercadolibre.com/sites/$1/search?category=$5&offset=$4&limit=$3" | sed -e 's/"id":"MLA/\'$'\n\t"id":"MLA/g' | sed -e 's/{/\'$'\n/g'> $2
+	curl -s "https://api.mercadolibre.com/sites/$1/search?category=$5&offset=$4&limit=$3" | sed -e 's/"id":"'$1'/\'$'\n\t"id":"'$1'/g' | sed -e 's/{/\'$'\n/g'> $2
 fi	
