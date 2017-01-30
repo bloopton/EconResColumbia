@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+#Eventually change to just siteID, curl https://api.mercadolibre.com/sites/(SITEID)/categories/all -o categories(SITEID).gz
+#usage: categoryRawData siteID(e.g. MLB)
+if [ "$#" -ne 2 ]
+then
+        echo "Usage: script | categoryRawDataFile(from .gz) | siteID(e.g. MLB)" 
+else
+	cat $1 | sed -e 's/"/\'$'\n{/g' | tr -d '{' | grep $2 | sort | uniq > catList
+fi 
+
+

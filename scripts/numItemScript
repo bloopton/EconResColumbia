@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#This script counts the number of items within an item page
+numberP1=0;
+
+if [ $# -ne 1 ]
+then
+	echo "Usage: script | fileName"
+else
+	#takes into account first siteID; therefore subtract 1
+	numberP1=$(grep -o 'site_id' $1 | wc -l)
+	((numberP1-=1))
+	echo $numberP1
+fi

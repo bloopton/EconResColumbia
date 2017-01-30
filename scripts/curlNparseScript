@@ -1,0 +1,10 @@
+#!/bin/bash -x
+
+#For curling and parsing items in a category
+#usage: script URL outputFileName
+if [ "$#" -ne 4 ] 
+then
+	echo "Usage: script | URL | fileName | limit | offset"
+else
+	curl -s "$1&$4&$3" | sed -e 's/"id":"MLB/\'$'\n\t"id":"MLB/g' | sed -e 's/{/\'$'\n/g'> $2
+fi	
