@@ -2,9 +2,9 @@
 
 #For curling and parsing items in a category
 #usage: script URL outputFileName
-if [ "$#" -ne 4 ] 
+if [ "$#" -ne 5 ] 
 then
-	echo "Usage: script | URL | fileName | limit | offset"
+	echo "Usage: script | siteID | fileName | limit | offset | categoryID"
 else
-	curl -s "$1&$4&$3" | sed -e 's/"id":"MLB/\'$'\n\t"id":"MLB/g' | sed -e 's/{/\'$'\n/g'> $2
+	curl -s "https://api.mercadolibre.com/sites/$1/search?category=$5&offset=$4&limit=$3" | sed -e 's/"id":"MLA/\'$'\n\t"id":"MLA/g' | sed -e 's/{/\'$'\n/g'> $2
 fi	
