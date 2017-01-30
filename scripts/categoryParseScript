@@ -1,13 +1,19 @@
 #!/bin/bash
-
+#Austin Pennington
+#Columbia University
+#Fetches category dump (of one siteID) from MercadoLibre.  Gunzips the .gz.  Splits into readable chunks.  Reads and processes each chunk.
 
 #Eventually change to just siteID, curl https://api.mercadolibre.com/sites/(SITEID)/categories/all -o categories(SITEID).gz
 #usage: categoryRawData siteID(e.g. MLB)
-if [ "$#" -ne 2 ]
+if [ "$#" -ne 1 ]
 then
-        echo "Usage: script | categoryRawDataFile(from .gz) | siteID(e.g. MLB)" 
+        echo "Usage: script | siteID(e.g. MLA)" 
 else
-	cat $1 | sed -e 's/"/\'$'\n{/g' | tr -d '{' | grep $2 | sort | uniq > catList
+	curl https://api.mercadolibre.com/sites/$1/categories/all -o categories$1.gz
+	gunzip categories$1.gz
+#	split -b 10m categories$1
+	cat categories$1 | sed -e 's/"/\'$'\n{/g' | tr -d '{' | grep $1 | sort | uniq > catList
+	rm categories$1
 fi 
 
 

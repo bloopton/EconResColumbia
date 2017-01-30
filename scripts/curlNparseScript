@@ -1,10 +1,13 @@
-#!/bin/bash -x
-
+#!/bin/bash 
+#Austin Pennington
+#Columbia University
+#
 #For curling and parsing items in a category
 #usage: script URL outputFileName
 if [ "$#" -ne 5 ] 
 then
 	echo "Usage: script | siteID | fileName | limit | offset | categoryID"
+	echo "E.g.:  ./curlNparseScript MLA itemList 200 0 MLA5726"
 else
 	curl -s "https://api.mercadolibre.com/sites/$1/search?category=$5&offset=$4&limit=$3" | sed -e 's/"id":"'$1'/\'$'\n\t"id":"'$1'/g' | sed -e 's/{/\'$'\n/g'> $2
 fi	

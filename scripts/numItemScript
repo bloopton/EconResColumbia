@@ -1,5 +1,7 @@
 #!/bin/bash
-
+#Austin Pennington
+#Columbia University
+#
 #This script counts the number of items within an item page
 numberP1=0;
 
