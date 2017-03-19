@@ -1,0 +1,36 @@
+#!/bin/bash
+
+PATH=${PATH}:~/econres/scripts:~/econres/scripts/scripts2
+
+
+#creates file called siteList
+
+curl https://api.mercadolibre.com/sites | sed -e 's/,/\'$'\n/g' | grep id | tr -d '"' | tr -d '{id:' | tr -d '[' > siteList
+
+#loop through site ids
+#SID is every line in siteList, i.e. site ID
+
+while read SID; do
+	#get categoryList for each site
+	curl -X GET https://api.mercadolibre.com/sites/$SID/categories | sed -e 's/,/\'$'\n/g' |  grep "id\":" | tr -d '"' | tr -d '{id:' | tr -d '[' > catList$SID
+
+	#for each category, get item number
+	#parse for items within list
+	#CID is every category within catList
+	while read CID; do
+		echo -n "$CID : " >> itemTotals
+#		curl -s "https://api.mercadolibre.com/sites/$SID/search?category=$CID" | sed -e 's/"id":"'$SID'/\'$'\n\t"id":"'$SID'/g' | sed -e 's/{/\'$'\n/g' | sed -e 's/,/\'$'\n/g' | grep 'total'| sed 's/[^0-9]//g' >> itemTotals
+
+curl -s "https://api.mercadolibre.com/sites/$SID/search?category=$CID" | sed -e 's/{/\'$'\n/g' | sed -e 's/,/\'$'\n/g' | grep '"total":' | sed 's/[^0-9]//g' >>itemTotals
+
+
+#sed 's/[^0-9]//g' remove all except digits
+
+
+	done < catList$SID
+	
+
+done < siteList
+
+rm catList*
+rm siteList

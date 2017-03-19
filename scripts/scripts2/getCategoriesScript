@@ -1,0 +1,62 @@
+#!/bin/bash
+
+PATH=${PATH}:~/econres/scripts:~/econres/scripts/scripts2
+
+#recursive function for getting category data (and that of existing children)
+recursiveChildList()
+{
+	CID=$1
+	curl -X GET https://api.mercadolibre.com/categories/$CID | jq . > $CID
+        #read each CID and get list of children categories (second, third level etc.); get data for each of those categories
+	sed -n '/"children_categories/,/]/p' $CID | sed -e 's/,/\'$'\n/g' |  grep "id\":" | tr -d '"' | tr -d '{id:' | tr -d '[' | tr -s " " > childCatList$CID
+	
+	#if children_categories is greater than 0 categories (at least one child)
+	listLength=$(cat childCatList$CID | wc -l)
+	echo $listLength
+	
+	#if error (404) returned
+	if grep -q "error" "childCatList$CID" ;
+	then	
+		echo "No children"
+		#do nothing, child does not exist
+	else
+		#recursive call for children
+		echo "Recursive call!!!!!!!!!!!!!!"
+		#CCID is children category ID
+		while read CCID; do
+			#repeat process on children, until there are no more children
+			recursiveChildList $CCID
+		done < childCatList$CID
+	fi
+}
+
+
+#creates file called siteList
+
+curl https://api.mercadolibre.com/sites | sed -e 's/,/\'$'\n/g' | grep id | tr -d '"' | tr -d '{id:' | tr -d '[' > siteList
+
+#loop through site ids
+#SID is every line in siteList, i.e. site ID
+
+while read SID; do
+	#get categoryList for each site
+	curl -X GET https://api.mercadolibre.com/sites/$SID/categories | sed -e 's/,/\'$'\n/g' |  grep "id\":" | tr -d '"' | tr -d '{id:' | tr -d '[' > catList$SID
+
+	#CID is every category within catList
+	#for each top-level category ID, make pretty-json text file that can be parsed by category parser program
+	while read CID; do
+		#call to function that processes top level category, and progresses down children (if any) recursively
+		recursiveChildList $CID
+	#	curl -X GET https://api.mercadolibre.com/categories/$CID | jq . > $CID
+		#read each CID and get list of children categories (second, third level etc.); get data for each of those categories
+	#	sed -n '/"children_categories/,/]/p' $CID | sed -e 's/,/\'$'\n/g' |  grep "id\":" | tr -d '"' | tr -d '{id:' | tr -d '[' | tr -s " " > childCatList$CID
+		#CCID is every category found as a child (not top level)
+	#	while read CCID; do
+	#	done < childCatList$CID
+	done < catList$SID
+done < siteList
+
+
+rm catList*
+#rm childCatList*
+rm siteList

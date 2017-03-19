@@ -1,0 +1,14 @@
+#!/bin/bash
+#Austin Pennington
+#Columbia University
+#Fetches category info (of one category ID) from MercadoLibre. 
+
+#Eventually change to just siteID, curl https://api.mercadolibre.com/sites/(SITEID)/categories/all -o categories(SITEID).gz
+#usage: categoryRawData siteID(e.g. MLB)
+if [ "$#" -ne 1 ]
+then
+        echo "Usage: script | siteID(e.g. MLA)"
+else
+	curl -X GET https://api.mercadolibre.com/categories/$1 | jq .
+
+fi
