@@ -1,0 +1,32 @@
+[
+  {
+    "site_id": "MCR",
+    "id": "gold_premium",
+    "name": "Oro Premium"
+  },
+  {
+    "site_id": "MCR",
+    "id": "gold_special",
+    "name": "Oro Profesional"
+  },
+  {
+    "site_id": "MCR",
+    "id": "gold",
+    "name": "Oro"
+  },
+  {
+    "site_id": "MCR",
+    "id": "silver",
+    "name": "Plata"
+  },
+  {
+    "site_id": "MCR",
+    "id": "bronze",
+    "name": "Bronce"
+  },
+  {
+    "site_id": "MCR",
+    "id": "free",
+    "name": "Gratuita"
+  }
+]

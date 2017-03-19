@@ -1,0 +1,12 @@
+[
+  {
+    "site_id": "MPY",
+    "id": "gold_premium",
+    "name": "Oro Premium"
+  },
+  {
+    "site_id": "MPY",
+    "id": "silver",
+    "name": "Plata"
+  }
+]

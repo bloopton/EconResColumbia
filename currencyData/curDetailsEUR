@@ -1,0 +1,6 @@
+{
+  "id": "EUR",
+  "symbol": "€",
+  "description": "Euro",
+  "decimal_places": 2
+}

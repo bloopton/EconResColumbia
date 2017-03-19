@@ -1,0 +1,6 @@
+{
+  "message": "You must send the parameter 'price' and has to be greater or equal than 0",
+  "error": "bad_request",
+  "status": 400,
+  "cause": []
+}

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+curl -X GET https://api.mercadolibre.com/currencies/ | jq . > currencies
+
+cat currencies | grep "\"id\":" | tr -d '"' | tr -d ':' | tr -d ',' | tr -d ' ' | tr -d 'id' > currencyList
+
+while read CUR; do 
+	curl -X GET https://api.mercadolibre.com/currencies/$CUR | jq . > curDetails$CUR
+
+done < currencyList

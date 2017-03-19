@@ -1,0 +1,12 @@
+[
+  {
+    "site_id": "MCU",
+    "id": "gold_premium",
+    "name": "Oro Premium"
+  },
+  {
+    "site_id": "MCU",
+    "id": "silver",
+    "name": "Plata"
+  }
+]

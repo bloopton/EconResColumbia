@@ -1,0 +1,32 @@
+[
+  {
+    "site_id": "MLU",
+    "id": "gold_premium",
+    "name": "Oro Premium"
+  },
+  {
+    "site_id": "MLU",
+    "id": "gold_special",
+    "name": "Oro Profesional"
+  },
+  {
+    "site_id": "MLU",
+    "id": "gold",
+    "name": "Oro"
+  },
+  {
+    "site_id": "MLU",
+    "id": "silver",
+    "name": "Plata"
+  },
+  {
+    "site_id": "MLU",
+    "id": "bronze",
+    "name": "Bronce"
+  },
+  {
+    "site_id": "MLU",
+    "id": "free",
+    "name": "Gratuita"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "site_id": "MBO",
+    "id": "gold_premium",
+    "name": "Oro Premium"
+  },
+  {
+    "site_id": "MBO",
+    "id": "silver",
+    "name": "Plata"
+  }
+]
