@@ -1,0 +1,76 @@
+{
+  "id": "bronze",
+  "not_available_in_categories": [
+    "MLB1743",
+    "MLB1459"
+  ],
+  "configuration": {
+    "name": "Bronze",
+    "listing_exposure": "low",
+    "requires_picture": false,
+    "max_stock_per_item": 9999,
+    "deduction_profile_id": null,
+    "differential_pricing_id": null,
+    "duration_days": {
+      "buy_it_now": 60,
+      "auction": 7,
+      "classified": null
+    },
+    "immediate_payment": {
+      "buy_it_now": false,
+      "auction": false,
+      "classified": false
+    },
+    "mercado_pago": "mandatory",
+    "listing_fee_criteria": {
+      "min_fee_amount": 0,
+      "max_fee_amount": 0,
+      "percentage_of_fee_amount": 0,
+      "currency": "BRL"
+    },
+    "sale_fee_criteria": {
+      "min_fee_amount": 0,
+      "max_fee_amount": 9999999999.99,
+      "percentage_of_fee_amount": 10,
+      "currency": "BRL"
+    }
+  },
+  "exceptions_by_category": [
+    {
+      "category_id": "MLB1540",
+      "category_name": "Serviços",
+      "configuration": {
+        "name": "Com Destaque 90",
+        "listing_exposure": "mid",
+        "requires_picture": false,
+        "max_stock_per_item": 999,
+        "deduction_profile_id": null,
+        "differential_pricing_id": null,
+        "duration_days": {
+          "buy_it_now": null,
+          "auction": null,
+          "classified": 90
+        },
+        "immediate_payment": {
+          "buy_it_now": false,
+          "auction": false,
+          "classified": false
+        },
+        "mercado_pago": "not_available",
+        "listing_fee_criteria": {
+          "min_fee_amount": 109,
+          "max_fee_amount": 109,
+          "percentage_of_fee_amount": 0,
+          "currency": "BRL"
+        },
+        "sale_fee_criteria": {
+          "min_fee_amount": 0,
+          "max_fee_amount": 0,
+          "percentage_of_fee_amount": 0,
+          "currency": null
+        }
+      },
+      "exceptions_by_category": []
+    }
+  ]
+}

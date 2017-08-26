@@ -7,6 +7,13 @@ recursiveChildList()
 {
 	CID=$1
 	curl -X GET https://api.mercadolibre.com/categories/$CID | jq . > $CID
+
+	#add category to categoryList
+	echo $CID >> listCategories
+
+	#create parent category file corresponding to CID for java parser to use
+	sed -n '/"path_from_root/,/]/p' $CID | sed -e 's/,/\'$'\n/g' |  grep "id\":" | tr -d '"' | tr -d '{id:' | tr -d '[' | tr -s " " > parents$CID
+
         #read each CID and get list of children categories (second, third level etc.); get data for each of those categories
 	sed -n '/"children_categories/,/]/p' $CID | sed -e 's/,/\'$'\n/g' |  grep "id\":" | tr -d '"' | tr -d '{id:' | tr -d '[' | tr -s " " > childCatList$CID
 	

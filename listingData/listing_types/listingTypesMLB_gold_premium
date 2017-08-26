@@ -1,0 +1,145 @@
+{
+  "id": "gold_premium",
+  "not_available_in_categories": [],
+  "configuration": {
+    "name": "Diamante",
+    "listing_exposure": "highest",
+    "requires_picture": true,
+    "max_stock_per_item": 9999,
+    "deduction_profile_id": null,
+    "differential_pricing_id": null,
+    "duration_days": {
+      "buy_it_now": 60,
+      "auction": 7,
+      "classified": null
+    },
+    "immediate_payment": {
+      "buy_it_now": false,
+      "auction": false,
+      "classified": false
+    },
+    "mercado_pago": "mandatory",
+    "listing_fee_criteria": {
+      "min_fee_amount": 150,
+      "max_fee_amount": 750,
+      "percentage_of_fee_amount": 5,
+      "currency": "BRL"
+    },
+    "sale_fee_criteria": {
+      "min_fee_amount": 0,
+      "max_fee_amount": 9999999999.99,
+      "percentage_of_fee_amount": 7.5,
+      "currency": "BRL"
+    }
+  },
+  "exceptions_by_category": [
+    {
+      "category_id": "MLB1743",
+      "category_name": "Carros, Motos e Outros",
+      "configuration": {
+        "name": "Diamante",
+        "listing_exposure": "highest",
+        "requires_picture": true,
+        "max_stock_per_item": 1,
+        "deduction_profile_id": null,
+        "differential_pricing_id": null,
+        "duration_days": {
+          "buy_it_now": null,
+          "auction": null,
+          "classified": 60
+        },
+        "immediate_payment": {
+          "buy_it_now": false,
+          "auction": false,
+          "classified": false
+        },
+        "mercado_pago": "not_available",
+        "listing_fee_criteria": {
+          "min_fee_amount": 179,
+          "max_fee_amount": 179,
+          "percentage_of_fee_amount": 0,
+          "currency": "BRL"
+        },
+        "sale_fee_criteria": {
+          "min_fee_amount": 0,
+          "max_fee_amount": 0,
+          "percentage_of_fee_amount": 0,
+          "currency": null
+        }
+      },
+      "exceptions_by_category": []
+    },
+    {
+      "category_id": "MLB1459",
+      "category_name": "Imóveis",
+      "configuration": {
+        "name": "Diamante",
+        "listing_exposure": "highest",
+        "requires_picture": true,
+        "max_stock_per_item": 1,
+        "deduction_profile_id": null,
+        "differential_pricing_id": null,
+        "duration_days": {
+          "buy_it_now": null,
+          "auction": null,
+          "classified": 60
+        },
+        "immediate_payment": {
+          "buy_it_now": false,
+          "auction": false,
+          "classified": false
+        },
+        "mercado_pago": "not_available",
+        "listing_fee_criteria": {
+          "min_fee_amount": 229,
+          "max_fee_amount": 229,
+          "percentage_of_fee_amount": 0,
+          "currency": "BRL"
+        },
+        "sale_fee_criteria": {
+          "min_fee_amount": 0,
+          "max_fee_amount": 0,
+          "percentage_of_fee_amount": 0,
+          "currency": null
+        }
+      },
+      "exceptions_by_category": []
+    },
+    {
+      "category_id": "MLB1540",
+      "category_name": "Serviços",
+      "configuration": {
+        "name": "Super Destaque 365",
+        "listing_exposure": "highest",
+        "requires_picture": false,
+        "max_stock_per_item": 999,
+        "deduction_profile_id": null,
+        "differential_pricing_id": null,
+        "duration_days": {
+          "buy_it_now": null,
+          "auction": null,
+          "classified": 365
+        },
+        "immediate_payment": {
+          "buy_it_now": false,
+          "auction": false,
+          "classified": false
+        },
+        "mercado_pago": "not_available",
+        "listing_fee_criteria": {
+          "min_fee_amount": 449,
+          "max_fee_amount": 449,
+          "percentage_of_fee_amount": 0,
+          "currency": "BRL"
+        },
+        "sale_fee_criteria": {
+          "min_fee_amount": 0,
+          "max_fee_amount": 0,
+          "percentage_of_fee_amount": 0,
+          "currency": null
+        }
+      },
+      "exceptions_by_category": []
+    }
+  ]
+}

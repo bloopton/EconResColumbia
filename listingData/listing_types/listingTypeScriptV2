@@ -1,0 +1,26 @@
+#!/bin/bash
+#Austin Pennington
+#This script gets listing type details of a specific listing type ID
+
+
+curl https://api.mercadolibre.com/sites | sed -e 's/,/\'$'\n/g' | grep id | tr -d '"' | tr -d '{id:' | tr -d '[' > siteList
+
+#loop through site ids
+#SID is every line in siteList, i.e. site ID
+
+#usage
+#if [ "$#" -ne 1 ]
+#then
+#        echo "Usage: script | listing type ID (e.g. gold_pro)"
+#else
+	while read SID; do
+		#LID is every listing type ID in the site
+		while read LID; do
+			curl -X GET https://api.mercadolibre.com/sites/$SID/listing_types/$LID | jq . > listingTypes$SID\_$LID
+
+		done < listingTypesList$SID 
+
+
+	done < siteList
+#fi
+rm siteList

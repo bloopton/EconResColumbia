@@ -1,0 +1,36 @@
+{
+  "id": "gold_special",
+  "not_available_in_categories": [
+    "MCR1743",
+    "MCR1459",
+    "MCR1540"
+  ],
+  "configuration": {
+    "name": "Oro Profesional",
+    "listing_exposure": "highest",
+    "requires_picture": true,
+    "max_stock_per_item": 9999,
+    "deduction_profile_id": null,
+    "differential_pricing_id": null,
+    "duration_days": {
+      "buy_it_now": 60,
+      "auction": 7,
+      "classified": null
+    },
+    "immediate_payment": {},
+    "mercado_pago": "not_available",
+    "listing_fee_criteria": {
+      "min_fee_amount": 0,
+      "max_fee_amount": 0,
+      "percentage_of_fee_amount": 0,
+      "currency": "CRC"
+    },
+    "sale_fee_criteria": {
+      "min_fee_amount": 0,
+      "max_fee_amount": 99999999999.99,
+      "percentage_of_fee_amount": 4,
+      "currency": "CRC"
+    }
+  },
+  "exceptions_by_category": []
+}

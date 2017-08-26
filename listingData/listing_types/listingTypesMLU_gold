@@ -1,0 +1,145 @@
+{
+  "id": "gold",
+  "not_available_in_categories": [],
+  "configuration": {
+    "name": "Oro",
+    "listing_exposure": "high",
+    "requires_picture": true,
+    "max_stock_per_item": 9999,
+    "deduction_profile_id": null,
+    "differential_pricing_id": null,
+    "duration_days": {
+      "buy_it_now": 60,
+      "auction": 7,
+      "classified": null
+    },
+    "immediate_payment": {
+      "buy_it_now": false,
+      "auction": false,
+      "classified": false
+    },
+    "mercado_pago": "mandatory",
+    "listing_fee_criteria": {
+      "min_fee_amount": 120,
+      "max_fee_amount": 390,
+      "percentage_of_fee_amount": 3,
+      "currency": "UYU"
+    },
+    "sale_fee_criteria": {
+      "min_fee_amount": 0,
+      "max_fee_amount": 425100,
+      "percentage_of_fee_amount": 5,
+      "currency": "UYU"
+    }
+  },
+  "exceptions_by_category": [
+    {
+      "category_id": "MLU1540",
+      "category_name": "Servicios",
+      "configuration": {
+        "name": "Platino 90",
+        "listing_exposure": "high",
+        "requires_picture": false,
+        "max_stock_per_item": 999,
+        "deduction_profile_id": null,
+        "differential_pricing_id": null,
+        "duration_days": {
+          "buy_it_now": null,
+          "auction": null,
+          "classified": 90
+        },
+        "immediate_payment": {
+          "buy_it_now": false,
+          "auction": false,
+          "classified": false
+        },
+        "mercado_pago": "not_available",
+        "listing_fee_criteria": {
+          "min_fee_amount": 1200,
+          "max_fee_amount": 1200,
+          "percentage_of_fee_amount": 0,
+          "currency": "UYU"
+        },
+        "sale_fee_criteria": {
+          "min_fee_amount": 0,
+          "max_fee_amount": 0,
+          "percentage_of_fee_amount": 0,
+          "currency": null
+        }
+      },
+      "exceptions_by_category": []
+    },
+    {
+      "category_id": "MLU1743",
+      "category_name": "Autos, Motos y Otros",
+      "configuration": {
+        "name": "Oro",
+        "listing_exposure": "high",
+        "requires_picture": true,
+        "max_stock_per_item": 1,
+        "deduction_profile_id": null,
+        "differential_pricing_id": null,
+        "duration_days": {
+          "buy_it_now": null,
+          "auction": null,
+          "classified": 60
+        },
+        "immediate_payment": {
+          "buy_it_now": false,
+          "auction": false,
+          "classified": false
+        },
+        "mercado_pago": "not_available",
+        "listing_fee_criteria": {
+          "min_fee_amount": 340,
+          "max_fee_amount": 340,
+          "percentage_of_fee_amount": 0,
+          "currency": "UYU"
+        },
+        "sale_fee_criteria": {
+          "min_fee_amount": 0,
+          "max_fee_amount": 0,
+          "percentage_of_fee_amount": 0,
+          "currency": null
+        }
+      },
+      "exceptions_by_category": []
+    },
+    {
+      "category_id": "MLU1459",
+      "category_name": "Inmuebles",
+      "configuration": {
+        "name": "Oro",
+        "listing_exposure": "high",
+        "requires_picture": true,
+        "max_stock_per_item": 1,
+        "deduction_profile_id": null,
+        "differential_pricing_id": null,
+        "duration_days": {
+          "buy_it_now": null,
+          "auction": null,
+          "classified": 60
+        },
+        "immediate_payment": {
+          "buy_it_now": false,
+          "auction": false,
+          "classified": false
+        },
+        "mercado_pago": "not_available",
+        "listing_fee_criteria": {
+          "min_fee_amount": 340,
+          "max_fee_amount": 340,
+          "percentage_of_fee_amount": 0,
+          "currency": "UYU"
+        },
+        "sale_fee_criteria": {
+          "min_fee_amount": 0,
+          "max_fee_amount": 0,
+          "percentage_of_fee_amount": 0,
+          "currency": null
+        }
+      },
+      "exceptions_by_category": []
+    }
+  ]
+}

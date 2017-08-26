@@ -1,0 +1,76 @@
+{
+  "id": "bronze",
+  "not_available_in_categories": [
+    "MLC1743",
+    "MLC1459"
+  ],
+  "configuration": {
+    "name": "Bronce",
+    "listing_exposure": "low",
+    "requires_picture": false,
+    "max_stock_per_item": 9999,
+    "deduction_profile_id": null,
+    "differential_pricing_id": null,
+    "duration_days": {
+      "buy_it_now": 60,
+      "auction": 7,
+      "classified": null
+    },
+    "immediate_payment": {
+      "buy_it_now": false,
+      "auction": false,
+      "classified": false
+    },
+    "mercado_pago": "mandatory",
+    "listing_fee_criteria": {
+      "min_fee_amount": 0,
+      "max_fee_amount": 0,
+      "percentage_of_fee_amount": 0,
+      "currency": "CLP"
+    },
+    "sale_fee_criteria": {
+      "min_fee_amount": 0,
+      "max_fee_amount": 1e+16,
+      "percentage_of_fee_amount": 9.5,
+      "currency": "CLP"
+    }
+  },
+  "exceptions_by_category": [
+    {
+      "category_id": "MLC1540",
+      "category_name": "Servicios",
+      "configuration": {
+        "name": "Básico 90",
+        "listing_exposure": "mid",
+        "requires_picture": false,
+        "max_stock_per_item": 999,
+        "deduction_profile_id": null,
+        "differential_pricing_id": null,
+        "duration_days": {
+          "buy_it_now": null,
+          "auction": null,
+          "classified": 90
+        },
+        "immediate_payment": {
+          "buy_it_now": false,
+          "auction": false,
+          "classified": false
+        },
+        "mercado_pago": "not_available",
+        "listing_fee_criteria": {
+          "min_fee_amount": 5000,
+          "max_fee_amount": 5000,
+          "percentage_of_fee_amount": 0,
+          "currency": "CLP"
+        },
+        "sale_fee_criteria": {
+          "min_fee_amount": 0,
+          "max_fee_amount": 0,
+          "percentage_of_fee_amount": 0,
+          "currency": null
+        }
+      },
+      "exceptions_by_category": []
+    }
+  ]
+}

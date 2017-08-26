@@ -1,0 +1,145 @@
+{
+  "id": "free",
+  "not_available_in_categories": [],
+  "configuration": {
+    "name": "Gratuita",
+    "listing_exposure": "lowest",
+    "requires_picture": false,
+    "max_stock_per_item": 9999,
+    "deduction_profile_id": null,
+    "differential_pricing_id": null,
+    "duration_days": {
+      "buy_it_now": 60,
+      "auction": 7,
+      "classified": null
+    },
+    "immediate_payment": {
+      "buy_it_now": false,
+      "auction": false,
+      "classified": false
+    },
+    "mercado_pago": "mandatory",
+    "listing_fee_criteria": {
+      "min_fee_amount": 0,
+      "max_fee_amount": 0,
+      "percentage_of_fee_amount": 0,
+      "currency": "PEN"
+    },
+    "sale_fee_criteria": {
+      "min_fee_amount": 0,
+      "max_fee_amount": 0,
+      "percentage_of_fee_amount": 0,
+      "currency": "PEN"
+    }
+  },
+  "exceptions_by_category": [
+    {
+      "category_id": "MPE1743",
+      "category_name": "Autos, Motos y Otros",
+      "configuration": {
+        "name": "Gratuita",
+        "listing_exposure": "lowest",
+        "requires_picture": false,
+        "max_stock_per_item": 1,
+        "deduction_profile_id": null,
+        "differential_pricing_id": null,
+        "duration_days": {
+          "buy_it_now": null,
+          "auction": null,
+          "classified": 30
+        },
+        "immediate_payment": {
+          "buy_it_now": false,
+          "auction": false,
+          "classified": false
+        },
+        "mercado_pago": "not_available",
+        "listing_fee_criteria": {
+          "min_fee_amount": 0,
+          "max_fee_amount": 0,
+          "percentage_of_fee_amount": 0,
+          "currency": "PEN"
+        },
+        "sale_fee_criteria": {
+          "min_fee_amount": 0,
+          "max_fee_amount": 0,
+          "percentage_of_fee_amount": 0,
+          "currency": null
+        }
+      },
+      "exceptions_by_category": []
+    },
+    {
+      "category_id": "MPE1540",
+      "category_name": "Servicios",
+      "configuration": {
+        "name": "Gratis",
+        "listing_exposure": "lowest",
+        "requires_picture": false,
+        "max_stock_per_item": 999,
+        "deduction_profile_id": null,
+        "differential_pricing_id": null,
+        "duration_days": {
+          "buy_it_now": null,
+          "auction": null,
+          "classified": 30
+        },
+        "immediate_payment": {
+          "buy_it_now": false,
+          "auction": false,
+          "classified": false
+        },
+        "mercado_pago": "not_available",
+        "listing_fee_criteria": {
+          "min_fee_amount": 0,
+          "max_fee_amount": 0,
+          "percentage_of_fee_amount": 0,
+          "currency": "PEN"
+        },
+        "sale_fee_criteria": {
+          "min_fee_amount": 0,
+          "max_fee_amount": 0,
+          "percentage_of_fee_amount": 0,
+          "currency": null
+        }
+      },
+      "exceptions_by_category": []
+    },
+    {
+      "category_id": "MPE1459",
+      "category_name": "Inmuebles",
+      "configuration": {
+        "name": "Gratuita",
+        "listing_exposure": "lowest",
+        "requires_picture": false,
+        "max_stock_per_item": 1,
+        "deduction_profile_id": null,
+        "differential_pricing_id": null,
+        "duration_days": {
+          "buy_it_now": null,
+          "auction": null,
+          "classified": 30
+        },
+        "immediate_payment": {
+          "buy_it_now": false,
+          "auction": false,
+          "classified": false
+        },
+        "mercado_pago": "not_available",
+        "listing_fee_criteria": {
+          "min_fee_amount": 0,
+          "max_fee_amount": 0,
+          "percentage_of_fee_amount": 0,
+          "currency": "PEN"
+        },
+        "sale_fee_criteria": {
+          "min_fee_amount": 0,
+          "max_fee_amount": 0,
+          "percentage_of_fee_amount": 0,
+          "currency": null
+        }
+      },
+      "exceptions_by_category": []
+    }
+  ]
+}

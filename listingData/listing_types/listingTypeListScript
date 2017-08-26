@@ -1,0 +1,13 @@
+#!/bin/bash
+
+curl https://api.mercadolibre.com/sites | sed -e 's/,/\'$'\n/g' | grep id | tr -d '"' | tr -d '{id:' | tr -d '[' > siteList
+
+#loop through site ids
+#SID is every line in siteList, i.e. site ID
+#Makes list of listing types with specific site ID
+while read SID; do
+	curl -X GET https://api.mercadolibre.com/sites/$SID/listing_types | jq . | grep \"id\": | tr -d \" | tr -d \, | tr -d \ | sed -e 's/id://g' > listingTypesList$SID
+
+
+done < siteList
+#rm siteList

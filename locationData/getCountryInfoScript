@@ -1,0 +1,9 @@
+#!/bin/bash
+
+curl -X GET https://api.mercadolibre.com/countries | jq . | grep \"id\": | tr -d \" | tr -d \, | tr -d \ | sed -e 's/id://g' > countryList
+
+#loop through country ID's (COID)
+while read COID; do
+	curl -X GET https://api.mercadolibre.com/countries/$COID | jq . > $COID
+done < countryList
+

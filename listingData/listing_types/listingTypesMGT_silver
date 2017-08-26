@@ -1,0 +1,129 @@
+{
+  "id": "silver",
+  "not_available_in_categories": [],
+  "configuration": {
+    "name": "Plata",
+    "listing_exposure": "low",
+    "requires_picture": false,
+    "max_stock_per_item": 9999,
+    "deduction_profile_id": null,
+    "differential_pricing_id": null,
+    "duration_days": {
+      "buy_it_now": 20,
+      "auction": 7,
+      "classified": null
+    },
+    "immediate_payment": {},
+    "mercado_pago": "not_available",
+    "listing_fee_criteria": {
+      "min_fee_amount": 0,
+      "max_fee_amount": 0,
+      "percentage_of_fee_amount": 0,
+      "currency": "GTQ"
+    },
+    "sale_fee_criteria": {
+      "min_fee_amount": 0,
+      "max_fee_amount": 0,
+      "percentage_of_fee_amount": 0,
+      "currency": "GTQ"
+    }
+  },
+  "exceptions_by_category": [
+    {
+      "category_id": "MGT1459",
+      "category_name": "Inmuebles",
+      "configuration": {
+        "name": "Plata",
+        "listing_exposure": "low",
+        "requires_picture": false,
+        "max_stock_per_item": 1,
+        "deduction_profile_id": null,
+        "differential_pricing_id": null,
+        "duration_days": {
+          "buy_it_now": 20,
+          "auction": 7,
+          "classified": 30
+        },
+        "immediate_payment": {},
+        "mercado_pago": "not_available",
+        "listing_fee_criteria": {
+          "min_fee_amount": 0,
+          "max_fee_amount": 0,
+          "percentage_of_fee_amount": 0,
+          "currency": "GTQ"
+        },
+        "sale_fee_criteria": {
+          "min_fee_amount": 0,
+          "max_fee_amount": 0,
+          "percentage_of_fee_amount": 0,
+          "currency": null
+        }
+      },
+      "exceptions_by_category": []
+    },
+    {
+      "category_id": "MGT1540",
+      "category_name": "Servicios",
+      "configuration": {
+        "name": "Básico 365",
+        "listing_exposure": "mid",
+        "requires_picture": false,
+        "max_stock_per_item": 9999,
+        "deduction_profile_id": null,
+        "differential_pricing_id": null,
+        "duration_days": {
+          "buy_it_now": 20,
+          "auction": 7,
+          "classified": 30
+        },
+        "immediate_payment": {},
+        "mercado_pago": "not_available",
+        "listing_fee_criteria": {
+          "min_fee_amount": 0,
+          "max_fee_amount": 0,
+          "percentage_of_fee_amount": 0,
+          "currency": "GTQ"
+        },
+        "sale_fee_criteria": {
+          "min_fee_amount": 0,
+          "max_fee_amount": 0,
+          "percentage_of_fee_amount": 0,
+          "currency": null
+        }
+      },
+      "exceptions_by_category": []
+    },
+    {
+      "category_id": "MGT1743",
+      "category_name": "Autos, Motos y Otros",
+      "configuration": {
+        "name": "Plata",
+        "listing_exposure": "low",
+        "requires_picture": false,
+        "max_stock_per_item": 1,
+        "deduction_profile_id": null,
+        "differential_pricing_id": null,
+        "duration_days": {
+          "buy_it_now": 20,
+          "auction": 7,
+          "classified": 30
+        },
+        "immediate_payment": {},
+        "mercado_pago": "not_available",
+        "listing_fee_criteria": {
+          "min_fee_amount": 0,
+          "max_fee_amount": 0,
+          "percentage_of_fee_amount": 0,
+          "currency": "GTQ"
+        },
+        "sale_fee_criteria": {
+          "min_fee_amount": 0,
+          "max_fee_amount": 0,
+          "percentage_of_fee_amount": 0,
+          "currency": null
+        }
+      },
+      "exceptions_by_category": []
+    }
+  ]
+}

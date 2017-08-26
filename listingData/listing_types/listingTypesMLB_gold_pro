@@ -1,0 +1,40 @@
+{
+  "id": "gold_pro",
+  "not_available_in_categories": [
+    "MLB1743",
+    "MLB1459",
+    "MLB1540"
+  ],
+  "configuration": {
+    "name": "Premium",
+    "listing_exposure": "highest",
+    "requires_picture": false,
+    "max_stock_per_item": 99999,
+    "deduction_profile_id": null,
+    "differential_pricing_id": 31499179,
+    "duration_days": {
+      "buy_it_now": 7300,
+      "auction": 7,
+      "classified": null
+    },
+    "immediate_payment": {
+      "buy_it_now": true,
+      "auction": false,
+      "classified": false
+    },
+    "mercado_pago": "mandatory",
+    "listing_fee_criteria": {
+      "min_fee_amount": 0,
+      "max_fee_amount": 0,
+      "percentage_of_fee_amount": 0,
+      "currency": "BRL"
+    },
+    "sale_fee_criteria": {
+      "min_fee_amount": 0,
+      "max_fee_amount": 47700,
+      "percentage_of_fee_amount": 16,
+      "currency": "BRL"
+    }
+  },
+  "exceptions_by_category": []
+}
