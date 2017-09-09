@@ -1,3 +1,3 @@
 # EconResColumbia
 
-Mercado Libre data scraping prototype.
+Mercado Libre API scraping.
